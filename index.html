@@ -17,6 +17,83 @@
 			.portfolio-anchor {
 				scroll-margin-top: 30px;
 			}
+
+			/* Portfolio group headings */
+			.portfolio-group-heading {
+				max-width: 900px;
+				margin: 0 auto 1.6em auto;
+				padding: 0 1.5em 1.25em 1.5em;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+			}
+
+			.portfolio-group-heading.projects {
+				margin-top: 2.75em;
+			}
+
+			.portfolio-group-heading .eyebrow {
+				display: block;
+				margin-bottom: 0.35em;
+				font-size: 0.58em;
+				font-weight: 600;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #81918E;
+			}
+
+			.portfolio-group-heading h3 {
+				margin: 0;
+				font-size: 1.18em;
+				font-weight: 400;
+				color: #666;
+			}
+
+			.portfolio-group-heading p {
+				margin: 0.55em auto 0 auto;
+				max-width: 760px;
+				font-size: 0.72em;
+				line-height: 1.5em;
+				color: #888;
+			}
+
+			/* Professional case-study CTA */
+			.case-study-note {
+				text-align: center !important;
+				color: #777;
+			}
+
+			.case-study-cta {
+				display: inline-block;
+				margin-top: 0.35em;
+				padding: 0.55em 1.05em;
+				border: 1px solid rgba(129, 145, 142, 0.35);
+				border-radius: 4px;
+				font-size: 0.9em;
+				font-weight: 600;
+				color: #66706e;
+				background: rgba(255, 255, 255, 0.65);
+				transition: all 0.2s ease-in-out;
+			}
+
+			.case-study-cta:hover {
+				color: #4f5b59;
+				border-color: rgba(129, 145, 142, 0.65);
+				background: #fff;
+			}
+
+			@media screen and (max-width: 736px) {
+				.portfolio-group-heading {
+					padding-left: 1em;
+					padding-right: 1em;
+				}
+
+				.portfolio-group-heading h3 {
+					font-size: 1.05em;
+				}
+
+				.portfolio-group-heading p {
+					font-size: 0.82em;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -88,14 +165,15 @@
 
 
 <!-- Professional BI Case Studies -->
-<header>
-    <h2>Professional BI Case Studies</h2>
+<div class="portfolio-group-heading">
+    <span class="eyebrow">Professional Experience</span>
+    <h3>Professional BI Case Studies</h3>
     <p>
         Selected Power BI solutions developed in professional environments.
-        Interactive reports are not publicly available; project context and approved screenshots
-        are available through the accompanying LinkedIn articles.
+        The original interactive reports are not publicly available; project context
+        and approved screenshots are shared through the accompanying LinkedIn articles.
     </p>
-</header>
+</div>
 
 <!-- Dataset Dictionary & Semantic Model Documentation -->
 <div id="dataset-dictionary" class="col-12 col-12-mobile portfolio-anchor">
@@ -129,9 +207,16 @@
                 automated bus matrix and DEV/TEST/PROD release tracking.
             </p>
 
-            <p class="portfolio-link">
+            <p class="portfolio-link case-study-note">
                 Professional case study — interactive report not publicly available.
-                Click the image above to read the LinkedIn article and view project screenshots.
+            </p>
+
+            <p class="portfolio-link">
+                <a class="case-study-cta"
+                   href="https://www.linkedin.com/pulse/empowering-stakeholders-through-transparency-alice-costa-ahbdf/"
+                   target="_blank" rel="noopener noreferrer">
+                    Read the LinkedIn article →
+                </a>
             </p>
 
         </header>
@@ -170,9 +255,16 @@
                 and guided “Try It Yourself” experiences.
             </p>
 
-            <p class="portfolio-link">
+            <p class="portfolio-link case-study-note">
                 Professional case study — interactive report not publicly available.
-                Click the image above to read the LinkedIn article and view project screenshots.
+            </p>
+
+            <p class="portfolio-link">
+                <a class="case-study-cta"
+                   href="https://www.linkedin.com/pulse/designing-self-learning-power-bi-demo-end-users-alice-costa-le4uf/"
+                   target="_blank" rel="noopener noreferrer">
+                    Read the LinkedIn article →
+                </a>
             </p>
 
         </header>
@@ -180,9 +272,10 @@
     </article>
 </div>
 
-<header>
-    <h2>Selected Power BI & Analytics Projects</h2>
-</header>
+<div class="portfolio-group-heading projects">
+    <span class="eyebrow">Public Portfolio</span>
+    <h3>Selected Power BI & Analytics Projects</h3>
+</div>
 
 <!-- Titanic Passenger Patterns & Outcomes -->
 <div id="titanic" class="col-12 col-12-mobile portfolio-anchor">
